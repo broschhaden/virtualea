@@ -190,21 +190,27 @@
       font-size: 0.95rem;
     }
 
-    .hero-card {
-      position: relative;
-      min-height: 560px;
-      border-radius: var(--radius-xl);
-      overflow: hidden;
-      background:
-        linear-gradient(180deg, rgba(79,101,120,0.05), rgba(79,101,120,0.18)),
-        linear-gradient(135deg, #e9dfd3 0%, #f7f2eb 52%, #cfdae2 100%);
-      box-shadow: var(--shadow);
-      border: 1px solid rgba(79,101,120,0.10);
-      display: flex;
-      align-items: flex-end;
-      justify-content: flex-start;
-      padding: 28px;
-    }
+.hero-card {
+  position: relative;
+  min-height: 560px;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+
+  background:
+    linear-gradient(180deg, rgba(79,101,120,0.25), rgba(79,101,120,0.55)),
+    url("birgit.jpg");
+
+  background-size: cover;
+  background-position: center 20%;
+
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(79,101,120,0.10);
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  padding: 28px;
+}
 
     .hero-card::before {
       content: "";
