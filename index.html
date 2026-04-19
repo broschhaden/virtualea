@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Warm Blue Studio | Thoughtful Business Support</title>
+  <meta name="description" content="Warm, calm, professional business support website with a cream and blue editorial design." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --cream: #f4eee5;
+      --cream-deep: #e7ddd0;
+      --blue: #6f879c;
+      --blue-deep: #4f6578;
+      --ink: #24323d;
+      --muted: #6f746f;
+      --white: #ffffff;
+      --card: rgba(255,255,255,0.66);
+      --border: rgba(79,101,120,0.16);
+      --shadow: 0 18px 45px rgba(36, 50, 61, 0.09);
+      --radius-xl: 28px;
+      --radius-lg: 20px;
+      --radius-md: 14px;
+      --max-width: 1180px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(180deg, var(--cream) 0%, #fbf8f3 38%, #f7f2eb 100%);
+      color: var(--ink);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(calc(100% - 32px), var(--max-width));
+      margin: 0 auto;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      backdrop-filter: blur(14px);
+      background: var(--blue-deep);
+      border-bottom: 1px solid rgba(255,255,255,0.15);
+    }
+
+    .header-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 24px;
+      padding: 18px 0;
+    }
+
+    .brand {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .brand-mark {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2rem;
+      line-height: 1;
+      letter-spacing: 0.02em;
+      color: var(--white);
+    }
+
+    .brand-sub {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.22em;
+      color: rgba(255,255,255,0.75);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .nav a {
+      font-size: 0.92rem;
+      color: var(--white);
+      position: relative;
+    }
+
+    .nav a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -5px;
+      width: 100%;
+      height: 1px;
+      background: var(--white);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.25s ease;
+    }
+
+    .nav a:hover::after,
+    .nav a:focus-visible::after {
+      transform: scaleX(1);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 24px;
+      border-radius: 999px;
+      font-weight: 600;
+      transition: transform 0.25s ease, background 0.25s ease, color 0.25s ease;
+    }
+
+    .btn:hover,
+    .btn:focus-visible {
+      transform: translateY(-1px);
+    }
+
+    .btn-primary {
+      background: var(--blue-deep);
+      color: var(--white);
+      box-shadow: var(--shadow);
+    }
+
+    .btn-secondary {
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,0.55);
+      color: var(--ink);
+    }
+
+    .hero {
+      padding: 72px 0 56px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 34px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      margin-bottom: 18px;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.22em;
+      color: var(--blue-deep);
+    }
+
+    h1, h2, h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 600;
+      line-height: 0.98;
+      letter-spacing: -0.01em;
+    }
+
+    h1 {
+      font-size: clamp(3.2rem, 7vw, 6.2rem);
+      max-width: 11ch;
+      margin-bottom: 24px;
+      color: var(--ink);
+    }
+
+    .hero p.lead {
+      max-width: 56ch;
+      font-size: 1.06rem;
+      color: #495864;
+      margin-bottom: 28px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-bottom: 26px;
+    }
+
+    .hero-note {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .hero-card {
+      position: relative;
+      min-height: 560px;
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      background:
+        linear-gradient(180deg, rgba(79,101,120,0.05), rgba(79,101,120,0.18)),
+        linear-gradient(135deg, #e9dfd3 0%, #f7f2eb 52%, #cfdae2 100%);
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(79,101,120,0.10);
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-start;
+      padding: 28px;
+    }
+
+    .hero-card::before {
+      content: "";
+      position: absolute;
+      inset: 18px;
+      border-radius: 22px;
+      border: 1px solid rgba(255,255,255,0.45);
+      pointer-events: none;
+    }
+
+    .hero-card-content {
+      position: relative;
+      z-index: 1;
+      max-width: 300px;
+      background: rgba(255,255,255,0.56);
+      backdrop-filter: blur(8px);
+      border-radius: 22px;
+      padding: 22px;
+      border: 1px solid rgba(79,101,120,0.10);
+    }
+
+    .hero-card-content h3 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+      color: var(--blue-deep);
+    }
+
+    .hero-card-content p {
+      color: #4b5a65;
+      font-size: 0.98rem;
+    }
+
+    section {
+      padding: 34px 0 74px;
+    }
+
+    .section-heading {
+      margin-bottom: 28px;
+    }
+
+    .section-heading .eyebrow {
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      font-size: clamp(2.4rem, 4.4vw, 4rem);
+      margin-bottom: 12px;
+    }
+
+    .section-heading p {
+      max-width: 62ch;
+      color: #55626d;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      gap: 26px;
+      align-items: stretch;
+    }
+
+    .about-panel,
+    .info-panel,
+    .service-card,
+    .testimonial-card,
+    .contact-card {
+      background: var(--card);
+      border: 1px solid rgba(79,101,120,0.10);
+      border-radius: var(--radius-xl);
+      box-shadow: var(--shadow);
+    }
+
+    .about-panel {
+      padding: 30px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.60), rgba(255,255,255,0.78));
+    }
+
+    .about-panel h3,
+    .info-panel h3,
+    .service-card h3,
+    .testimonial-card h3,
+    .contact-card h3 {
+      font-size: 2rem;
+      margin-bottom: 14px;
+    }
+
+    .about-panel p + p {
+      margin-top: 14px;
+    }
+
+    .info-panel {
+      padding: 30px;
+      background: linear-gradient(135deg, rgba(111,135,156,0.10), rgba(255,255,255,0.66));
+    }
+
+    .check-list {
+      list-style: none;
+      display: grid;
+      gap: 12px;
+      margin-top: 10px;
+    }
+
+    .check-list li {
+      display: grid;
+      grid-template-columns: 24px 1fr;
+      gap: 12px;
+      align-items: start;
+      color: #41515e;
+    }
+
+    .check-list li::before {
+      content: "✓";
+      color: var(--blue-deep);
+      font-weight: 700;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .service-card {
+      padding: 28px;
+    }
+
+    .service-number {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: rgba(111,135,156,0.14);
+      color: var(--blue-deep);
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+
+    .service-card p {
+      color: #50606d;
+      margin-bottom: 18px;
+    }
+
+    .text-link {
+      color: var(--blue-deep);
+      font-weight: 600;
+    }
+
+    .testimonial-wrap {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+    }
+
+    .testimonial-card {
+      padding: 28px;
+    }
+
+    .quote {
+      font-size: 1.05rem;
+      color: #42525f;
+      margin-bottom: 18px;
+    }
+
+    .quote-mark {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 4rem;
+      line-height: 0.8;
+      color: var(--blue);
+      opacity: 0.7;
+      margin-bottom: 8px;
+    }
+
+    .quote-author {
+      color: var(--muted);
+      font-size: 0.92rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+    }
+
+    .contact-card {
+      padding: 40px;
+      background: linear-gradient(135deg, rgba(79,101,120,0.96), rgba(111,135,156,0.90));
+      color: var(--white);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .contact-card::after {
+      content: "";
+      position: absolute;
+      width: 240px;
+      height: 240px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.08);
+      right: -60px;
+      top: -60px;
+    }
+
+    .contact-card h2,
+    .contact-card h3,
+    .contact-card p {
+      position: relative;
+      z-index: 1;
+    }
+
+    .contact-card p {
+      max-width: 54ch;
+      color: rgba(255,255,255,0.9);
+      margin-bottom: 22px;
+    }
+
+    .contact-card .btn-primary {
+      background: var(--white);
+      color: var(--blue-deep);
+      box-shadow: none;
+    }
+
+    .footer {
+      padding: 28px 0 42px;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      border-top: 1px solid rgba(79,101,120,0.12);
+      padding-top: 22px;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 980px) {
+      .hero-grid,
+      .about-grid,
+      .services-grid,
+      .testimonial-wrap {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-card {
+        min-height: 420px;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .header-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .nav {
+        gap: 14px 18px;
+      }
+
+      .hero {
+        padding-top: 42px;
+      }
+
+      h1 {
+        max-width: 100%;
+      }
+
+      .hero-card {
+        min-height: 360px;
+        padding: 18px;
+      }
+
+      .hero-card-content,
+      .about-panel,
+      .info-panel,
+      .service-card,
+      .testimonial-card,
+      .contact-card {
+        padding: 22px;
+        border-radius: 22px;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#top" class="brand" aria-label="Homepage">
+        <span class="brand-mark">Your Brand</span>
+        <span class="brand-sub">Warm support, thoughtful systems</span>
+      </a>
+
+      <nav class="nav" aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">Calm, capable business support</span>
+          <h1>Bring more ease into your working week.</h1>
+          <p class="lead">
+            A warm, polished website design for a service-based business that wants to feel personal,
+            trustworthy and beautifully put together. Inspired by a soft editorial layout, but restyled in warm cream and warm blue.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#contact" class="btn btn-primary">Book a consultation</a>
+            <a href="#services" class="btn btn-secondary">Explore services</a>
+          </div>
+
+          <p class="hero-note">Ideal for virtual assistants, consultants, wellness brands, coaches, creatives or boutique service businesses.</p>
+        </div>
+
+        <div class="hero-card">
+          <div class="hero-card-content">
+            <h3>Warm, organised, professional.</h3>
+            <p>
+              Clean sections, soft colours, elegant typography and clear calls to action for a welcoming first impression.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">About</span>
+          <h2>A website that feels calm and capable.</h2>
+          <p>
+            This layout keeps the same friendly, editorial feeling as your reference site, but shifts the palette into warm cream and warm blue for a softer, more premium presence.
+          </p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-panel">
+            <h3>A warm welcome</h3>
+            <p>
+              Use this area to introduce your business in a clear, reassuring way. Speak directly to the people you want to help and explain the value of working with you.
+            </p>
+            <p>
+              The overall feel is approachable and polished, with enough structure to guide visitors while still feeling personal and spacious.
+            </p>
+          </div>
+
+          <div class="info-panel">
+            <h3>What this homepage does well</h3>
+            <ul class="check-list">
+              <li>Creates a strong first impression without feeling hard or corporate.</li>
+              <li>Uses soft contrast and elegant spacing to make everything easier to read.</li>
+              <li>Highlights services clearly with room for testimonials and enquiries.</li>
+              <li>Works beautifully for modern service businesses that want a more refined online presence.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">Services</span>
+          <h2>Support designed around your business.</h2>
+          <p>
+            Replace these example cards with your actual offers. The structure is already set up for three core services.
+          </p>
+        </div>
+
+        <div class="services-grid">
+          <article class="service-card">
+            <div class="service-number">01</div>
+            <h3>Business Support</h3>
+            <p>
+              Ongoing practical support to help your days feel lighter, more organised and less overwhelming.
+            </p>
+            <a href="#contact" class="text-link">Enquire now</a>
+          </article>
+
+          <article class="service-card">
+            <div class="service-number">02</div>
+            <h3>Creative Admin</h3>
+            <p>
+              Beautifully organised back-end help, document design and admin systems that support your brand.
+            </p>
+            <a href="#contact" class="text-link">Learn more</a>
+          </article>
+
+          <article class="service-card">
+            <div class="service-number">03</div>
+            <h3>Website Design</h3>
+            <p>
+              A polished online presence that aligns with your values and helps potential clients trust you quickly.
+            </p>
+            <a href="#contact" class="text-link">View details</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="reviews">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">Reviews</span>
+          <h2>Kind words from lovely clients.</h2>
+          <p>
+            This section mirrors the soft testimonial style of the reference site while keeping the look more tailored and understated.
+          </p>
+        </div>
+
+        <div class="testimonial-wrap">
+          <article class="testimonial-card">
+            <div class="quote-mark">“</div>
+            <p class="quote">
+              Working together has made such a difference. Everything feels more organised, more intentional and far less stressful.
+            </p>
+            <p class="quote-author">— Client Name</p>
+          </article>
+
+          <article class="testimonial-card">
+            <div class="quote-mark">“</div>
+            <p class="quote">
+              A seamless, thoughtful service from start to finish. Warm, professional and exactly the support my business needed.
+            </p>
+            <p class="quote-author">— Client Name</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <div class="contact-card">
+          <span class="eyebrow" style="color: rgba(255,255,255,0.82);">Contact</span>
+          <h2>Ready to make your website feel more like you?</h2>
+          <p>
+            Add your enquiry details, booking link or contact form here. This section is designed to end the page with a calm but confident call to action.
+          </p>
+          <a href="mailto:hello@yourwebsite.com" class="btn btn-primary">hello@yourwebsite.com</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>© 2026 Your Brand. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
