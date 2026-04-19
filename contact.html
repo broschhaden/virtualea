@@ -16,140 +16,214 @@
   --white: #ffffff;
   --border: rgba(79,101,120,0.16);
   --shadow: 0 18px 45px rgba(36, 50, 61, 0.09);
+  --field-bg: #f8f6f1;
+  --button-olive: #9c9a79;
+  --button-olive-deep: #8d8b6b;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 body {
-  margin:0;
-  font-family:'Inter', sans-serif;
-  background:var(--cream);
-  color:var(--ink);
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: var(--cream);
+  color: var(--ink);
 }
 
 .container {
-  max-width:1100px;
-  margin:0 auto;
-  padding:0 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 /* HEADER */
 .site-header {
-  background:var(--blue-deep);
-  padding:18px 0;
+  background: var(--blue-deep);
+  padding: 18px 0;
 }
 
 .header-inner {
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
 }
 
 .brand-mark {
-  font-family:'Cormorant Garamond', serif;
-  color:#fff;
-  font-size:1.8rem;
+  font-family: 'Cormorant Garamond', serif;
+  color: #fff;
+  font-size: 1.8rem;
 }
 
 .brand-sub {
-  color:rgba(255,255,255,0.7);
-  font-size:0.7rem;
-  letter-spacing:2px;
-  text-transform:uppercase;
+  color: rgba(255,255,255,0.7);
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .nav a {
-  color:#fff;
-  margin-left:20px;
-  font-size:0.9rem;
+  color: #fff;
+  margin-left: 20px;
+  font-size: 0.9rem;
+  text-decoration: none;
 }
 
 /* HERO */
 .hero {
-  text-align:center;
-  padding:80px 0 50px;
+  text-align: center;
+  padding: 80px 0 50px;
 }
 
 .hero h1 {
-  font-family:'Cormorant Garamond', serif;
-  font-size:3.2rem;
-  margin-bottom:15px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 3.2rem;
+  margin-bottom: 15px;
 }
 
 .hero p {
-  max-width:600px;
-  margin:0 auto;
-  color:#5a6a76;
+  max-width: 600px;
+  margin: 0 auto;
+  color: #5a6a76;
+  line-height: 1.7;
 }
 
-/* CONTACT GRID */
-.contact-grid {
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:30px;
-  margin-bottom:80px;
+/* FORM WRAP */
+.contact-section {
+  padding-bottom: 80px;
 }
 
-/* FORM */
 .form-card {
-  background:#fff;
-  padding:30px;
-  border-radius:20px;
-  box-shadow:var(--shadow);
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .form-card h3 {
-  font-family:'Cormorant Garamond', serif;
-  margin-bottom:20px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2rem;
+  margin-bottom: 28px;
+  color: var(--ink);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
 }
 
 .form-group {
-  margin-bottom:15px;
+  margin-bottom: 22px;
 }
 
-input, textarea {
-  width:100%;
-  padding:12px;
-  border:1px solid var(--border);
-  border-radius:10px;
-  font-family:inherit;
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+  color: var(--ink);
+}
+
+.required-text {
+  color: #777;
+  font-weight: 400;
+  margin-left: 4px;
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid #bfc6ca;
+  background: var(--field-bg);
+  border-radius: 0;
+  font-family: inherit;
+  font-size: 1rem;
+  color: var(--ink);
+  outline: none;
+  appearance: none;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: var(--blue-deep);
 }
 
 textarea {
-  min-height:120px;
+  min-height: 120px;
+  resize: vertical;
+}
+
+.large-textarea {
+  min-height: 150px;
+}
+
+.select-wrap {
+  position: relative;
+}
+
+.select-wrap::after {
+  content: "⌄";
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-52%);
+  pointer-events: none;
+  font-size: 1.4rem;
+  color: var(--ink);
+}
+
+.submit-wrap {
+  text-align: center;
+  margin-top: 18px;
 }
 
 button {
-  background:var(--blue-deep);
-  color:#fff;
-  border:none;
-  padding:14px;
-  border-radius:999px;
-  width:100%;
-  font-weight:600;
-  cursor:pointer;
+  background: var(--button-olive);
+  color: #fff;
+  border: none;
+  padding: 14px 26px;
+  min-width: 98px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.25s ease;
 }
 
-/* INFO PANEL */
-.info-card {
-  background:linear-gradient(135deg, var(--blue-deep), var(--blue));
-  color:#fff;
-  padding:30px;
-  border-radius:20px;
-}
-
-.info-card h3 {
-  font-family:'Cormorant Garamond', serif;
-  margin-bottom:20px;
-}
-
-.info-card p {
-  margin-bottom:15px;
-  color:rgba(255,255,255,0.9);
+button:hover {
+  background: var(--button-olive-deep);
 }
 
 /* MOBILE */
-@media(max-width:800px){
-  .contact-grid{
-    grid-template-columns:1fr;
+@media (max-width: 800px) {
+  .header-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav a {
+    margin: 0 18px 0 0;
+  }
+
+  .hero {
+    padding: 56px 0 38px;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 0;
   }
 }
 </style>
@@ -183,45 +257,73 @@ button {
   </div>
 </section>
 
-<section class="container">
-  <div class="contact-grid">
-
-    <!-- FORM -->
+<section class="contact-section">
+  <div class="container">
     <div class="form-card">
-      <h3>Send a message</h3>
-
-      <form action="https://formspree.io/f/YOUR-ID" method="POST">
-        <div class="form-group">
-          <input type="text" name="name" placeholder="Your name" required>
-        </div>
-
-        <div class="form-group">
-          <input type="email" name="email" placeholder="Your email" required>
-        </div>
-
-        <div class="form-group">
-          <textarea name="message" placeholder="Tell me a little about what you need"></textarea>
-        </div>
-
-        <button type="submit">Send message</button>
-      </form>
-    </div>
-
-    <!-- INFO -->
-    <div class="info-card">
       <h3>Get in touch</h3>
 
-      <p><strong>Email:</strong><br> hello@yourwebsite.com</p>
+      <form action="https://formspree.io/f/YOUR-ID" method="POST">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="first-name">First Name <span class="required-text">(required)</span></label>
+            <input type="text" id="first-name" name="first_name" required>
+          </div>
 
-      <p>
-        I aim to respond within 1–2 working days.
-      </p>
+          <div class="form-group">
+            <label for="last-name">Last Name <span class="required-text">(required)</span></label>
+            <input type="text" id="last-name" name="last_name" required>
+          </div>
+        </div>
 
-      <p>
-        If you prefer, you can also reach out directly via email.
-      </p>
+        <div class="form-group">
+          <label for="email">Email <span class="required-text">(required)</span></label>
+          <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Phone <span class="required-text">(required)</span></label>
+          <input type="tel" id="phone" name="phone" required>
+        </div>
+
+        <div class="form-group">
+          <label for="company">Company</label>
+          <input type="text" id="company" name="company">
+        </div>
+
+        <div class="form-group">
+          <label for="hear-about">How did you hear about Birgit Rosch Haden? <span class="required-text">(required)</span></label>
+          <input type="text" id="hear-about" name="hear_about" required>
+        </div>
+
+        <div class="form-group">
+          <label for="support-needed">Support needed / project overview / tasks that you would love to offload <span class="required-text">(required)</span></label>
+          <textarea id="support-needed" name="support_needed" class="large-textarea" required></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="hours-required">Hours per month required <span class="required-text">(required)</span></label>
+          <div class="select-wrap">
+            <select id="hours-required" name="hours_required" required>
+              <option value="" selected disabled>Select an option</option>
+              <option>5–10 hours</option>
+              <option>10–20 hours</option>
+              <option>20–40 hours</option>
+              <option>40+ hours</option>
+              <option>Not sure yet</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message"></textarea>
+        </div>
+
+        <div class="submit-wrap">
+          <button type="submit">Submit</button>
+        </div>
+      </form>
     </div>
-
   </div>
 </section>
 
