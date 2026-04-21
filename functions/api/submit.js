@@ -5,8 +5,8 @@ export async function onRequestPost(context) {
     const formData = await request.formData();
     const data = Object.fromEntries(formData.entries());
 
-    // This calls the Resend API
-    const response = await fetch('https://api.resend.com/emails', {
+    // 1. Send the notification email TO YOU
+    const adminEmail = await fetch('https://api.resend.com/emails', {
       method: 'POST',
       headers: {
         'Authorization': `Bearer ${env.RESEND_API_KEY}`,
@@ -15,28 +15,40 @@ export async function onRequestPost(context) {
       body: JSON.stringify({
         from: 'Contact Form <onboarding@resend.dev>',
         to: 'broschhaden@outlook.com',
-        subject: `New Lead: ${data.name}`,
+        subject: `New Lead: ${data.first_name} ${data.last_name}`,
+        html: `<p><strong>Name:</strong> ${data.first_name} ${data.last_name}</p>
+               <p><strong>Email:</strong> ${data.email}</p>
+               <p><strong>Message:</strong> ${data.message}</p>`,
+      }),
+    });
+
+    // 2. Send the AUTO-REPLY to the USER
+    const autoReply = await fetch('https://api.resend.com/emails', {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${env.RESEND_API_KEY}`,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        from: 'Birgit Rosch Haden <onboarding@resend.dev>',
+        to: data.email, // Sends to the email the user typed in the form
+        subject: 'Thank you for reaching out!',
         html: `
-          <h1>New Contact Form Submission</h1>
-          <p><strong>Name:</strong> ${data.name}</p>
-          <p><strong>Email:</strong> ${data.email}</p>
-          <p><strong>Company:</strong> ${data.company}</p>
-          <p><strong>Hours Required:</strong> ${data.hours_required}</p>
-          <p><strong>Support Needed:</strong> ${data.support_needed}</p>
-          <p><strong>Message:</strong> ${data.message}</p>
+          <h1>Hello ${data.first_name},</h1>
+          <p>Thank you for contacting me. I have received your inquiry regarding <strong>${data.support_needed}</strong>.</p>
+          <p>I typically respond within 24 hours. I look forward to connecting soon!</p>
+          <p>Best regards,<br>Birgit Rosch Haden</p>
         `,
       }),
     });
 
-    if (response.ok) {
-      // Redirect to a thank you page or back to contact with success
+    if (adminEmail.ok && autoReply.ok) {
       return new Response(null, {
         status: 302,
         headers: { 'Location': '/contact.html?success=true' },
       });
     } else {
-      const error = await response.text();
-      return new Response("Error sending email: " + error, { status: 500 });
+      return new Response("Error sending emails", { status: 500 });
     }
   } catch (err) {
     return new Response("Server Error: " + err.message, { status: 500 });
