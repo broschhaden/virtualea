@@ -5,7 +5,7 @@ export async function onRequestPost(context) {
     const formData = await request.formData();
     const data = Object.fromEntries(formData.entries());
 
-    // 1. Send the notification email TO YOU
+    // 1. Send the notification email TO YOU (This part stays active)
     const adminEmail = await fetch('https://api.resend.com/emails', {
       method: 'POST',
       headers: {
@@ -22,7 +22,9 @@ export async function onRequestPost(context) {
       }),
     });
 
-    // 2. Send the AUTO-REPLY to the USER
+    /* -----------------------------------------------------------
+       PHASE 2: AUTO-REPLY (COMMENTED OUT UNTIL DOMAIN IS VERIFIED)
+       -----------------------------------------------------------
     const autoReply = await fetch('https://api.resend.com/emails', {
       method: 'POST',
       headers: {
@@ -31,7 +33,7 @@ export async function onRequestPost(context) {
       },
       body: JSON.stringify({
         from: 'Birgit Rosch Haden <onboarding@resend.dev>',
-        to: data.email, // Sends to the email the user typed in the form
+        to: data.email, 
         subject: 'Thank you for reaching out!',
         html: `
           <h1>Hello ${data.first_name},</h1>
@@ -41,14 +43,17 @@ export async function onRequestPost(context) {
         `,
       }),
     });
+    ----------------------------------------------------------- */
 
-    if (adminEmail.ok && autoReply.ok) {
+    // Since Auto-Reply is off, we only check if the adminEmail was successful
+    if (adminEmail.ok) {
       return new Response(null, {
         status: 302,
         headers: { 'Location': '/contact.html?success=true' },
       });
     } else {
-      return new Response("Error sending emails", { status: 500 });
+      const errorText = await adminEmail.text();
+      return new Response("Resend Error: " + errorText, { status: 500 });
     }
   } catch (err) {
     return new Response("Server Error: " + err.message, { status: 500 });
