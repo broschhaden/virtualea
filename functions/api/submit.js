@@ -27,12 +27,17 @@ export async function onRequestPost(context) {
         reply_to: email,
         subject: `New website enquiry: ${firstName} ${lastName}`,
         html: `
-          <h2>New website enquiry</h2>
-          <p><strong>Name:</strong> ${firstName} ${lastName}</p>
-          <p><strong>Email:</strong> ${email}</p>
-          <p><strong>Support needed:</strong> ${supportNeeded}</p>
-          <p><strong>Message:</strong></p>
-          <p>${message.replace(/\n/g, "<br>")}</p>
+  <h2>New website enquiry</h2>
+  <p><strong>Name:</strong> ${firstName} ${lastName}</p>
+  <p><strong>Email:</strong> ${email}</p>
+  <p><strong>Phone:</strong> ${data.phone || "Not provided"}</p>
+  <p><strong>Company:</strong> ${data.company || "Not provided"}</p>
+  <p><strong>Heard about:</strong> ${data.hear_about || "Not provided"}</p>
+  <p><strong>Hours needed:</strong> ${data.hours_required || "Not provided"}</p>
+  <p><strong>Support needed:</strong></p>
+  <p>${supportNeeded.replace(/\n/g, "<br>")}</p>
+  <p><strong>Message:</strong></p>
+  <p>${message.replace(/\n/g, "<br>")}</p>
         `,
       }),
     });
