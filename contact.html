@@ -315,18 +315,6 @@ button:hover {
     </p>
   </div>
 </section>
-
-<script>
-  // This script checks the URL for ?success=true and displays an alert
-  window.onload = function() {
-    const urlParams = new URLSearchParams(window.location.search);
-    if (urlParams.get('success') === 'true') {
-      alert("Thank you! Your message has been sent successfully.");
-      // Optional: Clean up the URL after showing the message
-      window.history.replaceState({}, document.title, window.location.pathname);
-    }
-  };
-</script>
   
 <section class="contact-section">
   <div class="container">
