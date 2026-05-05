@@ -254,6 +254,18 @@
   background: rgba(255,255,255,0.55);
   border: 1px solid var(--border);
   box-shadow: var(--shadow);
+  position: relative;
+}
+
+.info-panel::after {
+  content: "";
+  position: absolute;
+  bottom: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 1px;
+  background: rgba(79,101,120,0.15);
 }
 
 .info-panel h3 {
