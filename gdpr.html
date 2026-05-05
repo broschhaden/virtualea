@@ -1,338 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Privacy Policy | Rosch Haden</title>
-  <meta name="description" content="Privacy policy for Rosch Haden executive support, including how enquiry and client information is collected, used and protected." />
-  <link rel="canonical" href="https://www.roschhaden.com/gdpr.html" />
-  <meta property="og:title" content="Privacy Policy | Rosch Haden" />
-  <meta property="og:description" content="How Rosch Haden collects, uses and protects personal information." />
-  <meta property="og:url" content="https://www.roschhaden.com/gdpr.html" />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://www.roschhaden.com/logo.png" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <style>
-:root {
-  --cream: #f4eee5;
-  --cream-deep: #e7ddd0;
-  --blue: #6f879c;
-  --blue-deep: #4f6578;
-  --ink: #24323d;
-  --muted: #6f746f;
-  --white: #ffffff;
-  --card: rgba(255,255,255,0.72);
-  --border: rgba(79,101,120,0.16);
-  --shadow: 0 18px 45px rgba(36, 50, 61, 0.09);
-  --radius-xl: 28px;
-  --radius-lg: 20px;
-  --max-width: 1180px;
-}
-* { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
-body {
-  font-family: 'Inter', sans-serif;
-  background: linear-gradient(180deg, var(--cream) 0%, #fbf8f3 38%, #f7f2eb 100%);
-  color: var(--ink);
-  line-height: 1.7;
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
-}
-a { color: inherit; text-decoration: none; }
-.container { width: min(calc(100% - 32px), var(--max-width)); margin: 0 auto; }
-.site-header {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  backdrop-filter: blur(14px);
-  background: var(--blue-deep);
-  border-bottom: 1px solid rgba(255,255,255,0.15);
-}
-.header-inner {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 24px;
-  padding: 18px 0;
-}
-.brand { display: flex; flex-direction: column; gap: 2px; }
-.brand-mark {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 2rem;
-  line-height: 1;
-  letter-spacing: 0.02em;
-  color: var(--white);
-}
-.brand-sub {
-  font-size: 0.72rem;
-  text-transform: uppercase;
-  letter-spacing: 0.22em;
-  color: rgba(255,255,255,0.75);
-}
-.nav { display: flex; align-items: center; gap: 24px; flex-wrap: wrap; }
-.nav a { font-size: 0.92rem; color: var(--white); position: relative; }
-.nav a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -5px;
-  width: 100%;
-  height: 1px;
-  background: var(--white);
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.25s ease;
-}
-.nav a:hover::after, .nav a:focus-visible::after, .nav a.active::after { transform: scaleX(1); }
-.page-hero { padding: 78px 0 38px; text-align: center; }
-.eyebrow {
-  display: inline-block;
-  margin-bottom: 18px;
-  font-size: 0.8rem;
-  text-transform: uppercase;
-  letter-spacing: 0.22em;
-  color: var(--blue-deep);
-}
-h1, h2, h3 {
-  font-family: 'Cormorant Garamond', serif;
-  font-weight: 600;
-  line-height: 0.98;
-  letter-spacing: -0.01em;
-}
-h1 { font-size: clamp(3rem, 6vw, 5.2rem); margin-bottom: 18px; }
-.page-hero p {
-  max-width: 64ch;
-  margin: 0 auto;
-  color: #55626d;
-  font-size: 1.04rem;
-}
-.content-wrap { padding: 12px 0 80px; }
-.policy-layout {
-  display: grid;
-  grid-template-columns: 0.82fr 1.18fr;
-  gap: 26px;
-  align-items: start;
-}
-.panel, .policy-card {
-  background: var(--card);
-  border: 1px solid rgba(79,101,120,0.10);
-  border-radius: var(--radius-xl);
-  box-shadow: var(--shadow);
-  padding: 30px;
-}
-.panel h2, .policy-card h2 { font-size: 2.2rem; margin-bottom: 16px; color: var(--ink); }
-.panel h3, .policy-card h3 { font-size: 1.7rem; margin: 30px 0 12px; color: var(--blue-deep); }
-.policy-card p, .panel p { color: #41515e; margin-bottom: 14px; }
-.policy-card ul, .panel ul { margin: 12px 0 18px 22px; color: #41515e; }
-.policy-card li, .panel li { margin-bottom: 8px; }
-.note {
-  margin-top: 18px;
-  padding: 18px 20px;
-  border-radius: 22px;
-  background: rgba(111,135,156,0.12);
-  border: 1px solid var(--border);
-  color: #41515e;
-}
-.toc {
-  position: sticky;
-  top: 104px;
-}
-.toc ul { list-style: none; margin: 0; display: grid; gap: 10px; }
-.toc li { margin: 0; }
-.toc a {
-  color: var(--blue-deep);
-  font-weight: 600;
-  border-bottom: 1px solid transparent;
-}
-.toc a:hover { border-bottom-color: var(--blue-deep); }
-.meta {
-  color: var(--muted);
-  font-size: 0.92rem;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  margin-bottom: 18px;
-}
-.cta {
-  margin-top: 26px;
-  padding: 32px;
-  border-radius: var(--radius-xl);
-  background: linear-gradient(135deg, rgba(79,101,120,0.96), rgba(111,135,156,0.90));
-  color: var(--white);
-  box-shadow: var(--shadow);
-}
-.cta h3 { font-size: 2rem; margin-bottom: 12px; color: var(--white); }
-.cta p { color: rgba(255,255,255,0.9); margin-bottom: 18px; max-width: 54ch; }
-.btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 14px 24px;
-  border-radius: 999px;
-  font-weight: 600;
-  background: var(--white);
-  color: var(--blue-deep);
-}
-.footer { padding: 28px 0 42px; color: var(--muted); font-size: 0.92rem; }
-.footer-inner {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 16px;
-  flex-wrap: wrap;
-  border-top: 1px solid rgba(79,101,120,0.12);
-  padding-top: 22px;
-}
-.footer-links { display: flex; gap: 18px; flex-wrap: wrap; }
-@media (max-width: 900px) {
-  .policy-layout { grid-template-columns: 1fr; }
-  .toc { position: static; }
-}
-@media (max-width: 760px) {
-  .header-inner { flex-direction: column; align-items: flex-start; }
-  .nav { gap: 14px 18px; }
-  .panel, .policy-card, .cta { padding: 22px; border-radius: 22px; }
-}
-</style>
+<meta charset="UTF-8">
+<title>Privacy Policy | Rosch Haden</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-<body>
 
-<header class="site-header">
-  <div class="container header-inner">
-    <a href="index.html" class="brand" aria-label="Homepage">
-      <span class="brand-mark">Rosch Haden</span>
-      <span class="brand-sub">Executive Partner to Founders and Leaders</span>
-    </a>
+<body style="font-family: Inter, sans-serif; background:#f4eee5; color:#24323d; line-height:1.7; max-width:900px; margin:40px auto;">
 
-    <nav class="nav" aria-label="Main navigation">
-      <a href="about.html">About</a>
-      <a href="services.html">Services</a>
-      <a href="reviews.html">Reviews</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </div>
-</header>
+<h1>Privacy Policy</h1>
 
-<main>
-  <section class="page-hero">
-    <div class="container">
-      <span class="eyebrow">Privacy Policy</span>
-      <h1>How your information is handled.</h1>
-      <p>This privacy policy explains how Rosch Haden collects, uses and protects personal information when you visit the website, submit an enquiry or become a client.</p>
-    </div>
-  </section>
+<p>This Privacy Policy explains how Rosch Haden (“we”, “us”, “our”) collects, uses and protects your personal data in accordance with UK GDPR.</p>
 
-  <section class="content-wrap">
-    <div class="container policy-layout">
-      <aside class="panel toc">
-        <p class="meta">Last updated: 05 May 2026</p>
-        <h2>Contents</h2>
-        <ul>
-          <li><a href="#who">Who we are</a></li>
-          <li><a href="#collect">Information collected</a></li>
-          <li><a href="#use">How information is used</a></li>
-          <li><a href="#basis">Lawful basis</a></li>
-          <li><a href="#sharing">Sharing and suppliers</a></li>
-          <li><a href="#retention">How long information is kept</a></li>
-          <li><a href="#rights">Your rights</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-        <div class="note">
-          This page is written for a UK-based executive support business. You should review business names, email addresses, supplier names and retention periods before publishing.
-        </div>
-      </aside>
+<h2>1. Data Controller</h2>
+<p>Rosch Haden<br>
+Email: broschhaden@outlook.com<br>
+(You should add your business address here)</p>
 
-      <article class="policy-card">
-        <p class="meta">Rosch Haden · Privacy and GDPR</p>
+<h2>2. Data We Collect</h2>
+<ul>
+<li>Name</li>
+<li>Email address</li>
+<li>Phone number</li>
+<li>Company details</li>
+<li>Project / support requirements</li>
+<li>Any information submitted via contact forms</li>
+</ul>
 
-        <h2 id="who">Who we are</h2>
-        <p>Rosch Haden provides remote executive support and executive partnership services for founders, senior leaders and businesses in the UK.</p>
-        <p>For the purpose of UK data protection law, the data controller is Birgit Rosch Haden trading as Rosch Haden.</p>
+<h2>3. Lawful Basis</h2>
+<p>We process your data under:</p>
+<ul>
+<li>Legitimate Interest – responding to enquiries</li>
+<li>Contract – where services are agreed</li>
+</ul>
 
-        <h3 id="collect">Information we collect</h3>
-        <p>We may collect personal information when you contact us, submit a website enquiry, discuss working together, become a client or communicate with us by email, phone or other business channels.</p>
-        <ul>
-          <li>Name and contact details, including email address and phone number.</li>
-          <li>Company name and role, where provided.</li>
-          <li>Information you choose to share about your support needs, projects, business priorities or preferred hours of support.</li>
-          <li>Messages, enquiry details and correspondence.</li>
-          <li>Basic website and technical information, such as browser type, device information and pages visited, where analytics or hosting logs are used.</li>
-          <li>Billing, payment and contract information where you become a client.</li>
-        </ul>
+<h2>4. How We Use Your Data</h2>
+<ul>
+<li>Respond to enquiries</li>
+<li>Provide services</li>
+<li>Manage client relationships</li>
+</ul>
 
-        <h3 id="use">How we use your information</h3>
-        <p>Your information is used to respond to enquiries, understand whether Rosch Haden is the right fit for your needs, provide services, manage client relationships and run the business properly.</p>
-        <ul>
-          <li>To reply to messages submitted through the contact form.</li>
-          <li>To arrange calls, discuss requirements and prepare proposals or retainers.</li>
-          <li>To provide executive support services once agreed.</li>
-          <li>To manage invoicing, payment records and business administration.</li>
-          <li>To keep appropriate records for legal, tax and accounting purposes.</li>
-          <li>To improve the website, enquiry process and client experience.</li>
-        </ul>
+<h2>5. Data Retention</h2>
+<p>We retain enquiry data for up to 12 months unless a client relationship is formed.</p>
 
-        <h3 id="basis">Lawful basis for processing</h3>
-        <p>We only process personal information where there is a lawful basis to do so. Depending on the situation, this may include:</p>
-        <ul>
-          <li><strong>Contract:</strong> where processing is needed to provide services or take steps before entering into a client agreement.</li>
-          <li><strong>Legitimate interests:</strong> where processing is needed to respond to enquiries, manage business relationships, improve services or protect the business, provided your rights and interests do not override those interests.</li>
-          <li><strong>Legal obligation:</strong> where information must be kept for tax, accounting, regulatory or legal reasons.</li>
-          <li><strong>Consent:</strong> where you have clearly agreed to a specific use of your information, such as optional marketing communications.</li>
-        </ul>
+<h2>6. Your Rights</h2>
+<p>You have the right to:</p>
+<ul>
+<li>Access your data</li>
+<li>Correct inaccurate data</li>
+<li>Request deletion</li>
+<li>Restrict processing</li>
+<li>Data portability</li>
+<li>Object to processing</li>
+</ul>
 
-        <h3 id="sharing">Who information may be shared with</h3>
-        <p>We do not sell personal information. We may share information with trusted suppliers where needed to operate the website, manage communications, deliver services or meet legal obligations.</p>
-        <ul>
-          <li>Website hosting, email, form handling and security providers.</li>
-          <li>Accounting, bookkeeping, payment or professional advisory providers.</li>
-          <li>Legal, regulatory or public authorities where required by law.</li>
-        </ul>
-        <p>Where suppliers process personal information on our behalf, they are expected to handle it securely and only for the agreed purpose.</p>
+<h2>7. Complaints</h2>
+<p>You have the right to lodge a complaint with the UK data regulator (Information Commissioner's Office).</p>
 
-        <h3 id="retention">How long we keep information</h3>
-        <p>We keep personal information only for as long as needed for the reason it was collected, including for business, legal, tax and accounting purposes.</p>
-        <ul>
-          <li>Enquiry information is usually kept for up to 24 months unless a working relationship begins or there is a clear reason to keep it longer.</li>
-          <li>Client, contract, invoice and payment records may be kept for up to 7 years to meet tax and accounting requirements.</li>
-          <li>General correspondence may be kept for as long as reasonably needed to manage the relationship and protect the business.</li>
-        </ul>
+<h2>8. Data Security</h2>
+<p>We take appropriate technical and organisational measures to protect your data.</p>
 
-        <h3>Cookies and analytics</h3>
-        <p>The website may use essential hosting or security technologies that are needed for the site to work. If analytics, tracking pixels or non-essential cookies are added in future, this policy should be updated and an appropriate cookie notice should be used.</p>
+<h2>9. Third Parties</h2>
+<p>We do not sell your data. Data may be processed via secure third-party services (e.g. email providers).</p>
 
-        <h3 id="rights">Your data protection rights</h3>
-        <p>Under UK data protection law, you may have rights to access, correct, delete, restrict or object to the use of your personal information. You may also have the right to data portability and the right to withdraw consent where consent is the lawful basis being used.</p>
-        <p>You also have the right to complain to the Information Commissioner’s Office if you are unhappy with how your information has been handled.</p>
-
-        <h3 id="contact">Contact</h3>
-        <p>To ask a privacy question or make a data protection request, contact Rosch Haden using the details on the contact page.</p>
-        <p><strong>Website:</strong> www.roschhaden.com</p>
-
-        <div class="cta">
-          <h3>Need to discuss your information?</h3>
-          <p>If you have a privacy question, or would like to ask about information you have shared through the website, please get in touch.</p>
-          <a href="contact.html" class="btn">Contact Rosch Haden</a>
-        </div>
-      </article>
-    </div>
-  </section>
-</main>
-
-<footer class="footer">
-  <div class="container footer-inner">
-    <p>© 2026 Birgit Rosch Haden. All rights reserved.</p>
-    <div class="footer-links">
-      <a href="about.html">About</a>
-      <a href="services.html">Services</a>
-      <a href="reviews.html">Reviews</a>
-      <a href="contact.html">Contact</a>
-      <a href="gdpr.html">Privacy</a>
-      <a href="terms.html">Terms</a>
-    </div>
-  </div>
-</footer>
+<h2>10. Contact</h2>
+<p>For any privacy queries, contact: broschhaden@outlook.com</p>
 
 </body>
 </html>
