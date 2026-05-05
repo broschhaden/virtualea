@@ -47,7 +47,7 @@ export async function onRequestPost(context) {
       return new Response("Resend Error: " + errorText, { status: 500 });
     }
 
-    return Response.redirect(new URL("/contact.html?success=true", request.url), 303);
+    return Response.redirect(new URL("/thank-you.html", request.url), 303);
   } catch (err) {
     return new Response("Server Error: " + err.message, { status: 500 });
   }
