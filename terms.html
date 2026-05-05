@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms & Conditions | Rosch Haden</title>
+  <meta name="description" content="Website terms and conditions for Rosch Haden executive support." />
+  <link rel="canonical" href="https://www.roschhaden.com/terms.html" />
+  <meta property="og:title" content="Terms & Conditions | Rosch Haden" />
+  <meta property="og:description" content="Terms for using the Rosch Haden website and enquiring about executive support services." />
+  <meta property="og:url" content="https://www.roschhaden.com/terms.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://www.roschhaden.com/logo.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+:root {
+  --cream: #f4eee5;
+  --cream-deep: #e7ddd0;
+  --blue: #6f879c;
+  --blue-deep: #4f6578;
+  --ink: #24323d;
+  --muted: #6f746f;
+  --white: #ffffff;
+  --card: rgba(255,255,255,0.72);
+  --border: rgba(79,101,120,0.16);
+  --shadow: 0 18px 45px rgba(36, 50, 61, 0.09);
+  --radius-xl: 28px;
+  --radius-lg: 20px;
+  --max-width: 1180px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(180deg, var(--cream) 0%, #fbf8f3 38%, #f7f2eb 100%);
+  color: var(--ink);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+a { color: inherit; text-decoration: none; }
+.container { width: min(calc(100% - 32px), var(--max-width)); margin: 0 auto; }
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(14px);
+  background: var(--blue-deep);
+  border-bottom: 1px solid rgba(255,255,255,0.15);
+}
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  padding: 18px 0;
+}
+.brand { display: flex; flex-direction: column; gap: 2px; }
+.brand-mark {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2rem;
+  line-height: 1;
+  letter-spacing: 0.02em;
+  color: var(--white);
+}
+.brand-sub {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  color: rgba(255,255,255,0.75);
+}
+.nav { display: flex; align-items: center; gap: 24px; flex-wrap: wrap; }
+.nav a { font-size: 0.92rem; color: var(--white); position: relative; }
+.nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 100%;
+  height: 1px;
+  background: var(--white);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s ease;
+}
+.nav a:hover::after, .nav a:focus-visible::after, .nav a.active::after { transform: scaleX(1); }
+.page-hero { padding: 78px 0 38px; text-align: center; }
+.eyebrow {
+  display: inline-block;
+  margin-bottom: 18px;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  color: var(--blue-deep);
+}
+h1, h2, h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 600;
+  line-height: 0.98;
+  letter-spacing: -0.01em;
+}
+h1 { font-size: clamp(3rem, 6vw, 5.2rem); margin-bottom: 18px; }
+.page-hero p {
+  max-width: 64ch;
+  margin: 0 auto;
+  color: #55626d;
+  font-size: 1.04rem;
+}
+.content-wrap { padding: 12px 0 80px; }
+.policy-layout {
+  display: grid;
+  grid-template-columns: 0.82fr 1.18fr;
+  gap: 26px;
+  align-items: start;
+}
+.panel, .policy-card {
+  background: var(--card);
+  border: 1px solid rgba(79,101,120,0.10);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow);
+  padding: 30px;
+}
+.panel h2, .policy-card h2 { font-size: 2.2rem; margin-bottom: 16px; color: var(--ink); }
+.panel h3, .policy-card h3 { font-size: 1.7rem; margin: 30px 0 12px; color: var(--blue-deep); }
+.policy-card p, .panel p { color: #41515e; margin-bottom: 14px; }
+.policy-card ul, .panel ul { margin: 12px 0 18px 22px; color: #41515e; }
+.policy-card li, .panel li { margin-bottom: 8px; }
+.note {
+  margin-top: 18px;
+  padding: 18px 20px;
+  border-radius: 22px;
+  background: rgba(111,135,156,0.12);
+  border: 1px solid var(--border);
+  color: #41515e;
+}
+.toc {
+  position: sticky;
+  top: 104px;
+}
+.toc ul { list-style: none; margin: 0; display: grid; gap: 10px; }
+.toc li { margin: 0; }
+.toc a {
+  color: var(--blue-deep);
+  font-weight: 600;
+  border-bottom: 1px solid transparent;
+}
+.toc a:hover { border-bottom-color: var(--blue-deep); }
+.meta {
+  color: var(--muted);
+  font-size: 0.92rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin-bottom: 18px;
+}
+.cta {
+  margin-top: 26px;
+  padding: 32px;
+  border-radius: var(--radius-xl);
+  background: linear-gradient(135deg, rgba(79,101,120,0.96), rgba(111,135,156,0.90));
+  color: var(--white);
+  box-shadow: var(--shadow);
+}
+.cta h3 { font-size: 2rem; margin-bottom: 12px; color: var(--white); }
+.cta p { color: rgba(255,255,255,0.9); margin-bottom: 18px; max-width: 54ch; }
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 24px;
+  border-radius: 999px;
+  font-weight: 600;
+  background: var(--white);
+  color: var(--blue-deep);
+}
+.footer { padding: 28px 0 42px; color: var(--muted); font-size: 0.92rem; }
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  border-top: 1px solid rgba(79,101,120,0.12);
+  padding-top: 22px;
+}
+.footer-links { display: flex; gap: 18px; flex-wrap: wrap; }
+@media (max-width: 900px) {
+  .policy-layout { grid-template-columns: 1fr; }
+  .toc { position: static; }
+}
+@media (max-width: 760px) {
+  .header-inner { flex-direction: column; align-items: flex-start; }
+  .nav { gap: 14px 18px; }
+  .panel, .policy-card, .cta { padding: 22px; border-radius: 22px; }
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="brand" aria-label="Homepage">
+      <span class="brand-mark">Rosch Haden</span>
+      <span class="brand-sub">Executive Partner to Founders and Leaders</span>
+    </a>
+
+    <nav class="nav" aria-label="Main navigation">
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="reviews.html">Reviews</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <span class="eyebrow">Terms & Conditions</span>
+      <h1>Using this website and working together.</h1>
+      <p>These terms explain how this website may be used and the basis on which enquiries, proposals and executive support services are handled.</p>
+    </div>
+  </section>
+
+  <section class="content-wrap">
+    <div class="container policy-layout">
+      <aside class="panel toc">
+        <p class="meta">Last updated: 05 May 2026</p>
+        <h2>Contents</h2>
+        <ul>
+          <li><a href="#about">About these terms</a></li>
+          <li><a href="#website">Website use</a></li>
+          <li><a href="#enquiries">Enquiries and proposals</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#fees">Fees and payment</a></li>
+          <li><a href="#confidentiality">Confidentiality</a></li>
+          <li><a href="#liability">Liability</a></li>
+          <li><a href="#law">Governing law</a></li>
+        </ul>
+        <div class="note">
+          These are website and service enquiry terms. For retained client work, you should still use a separate written client agreement or statement of work.
+        </div>
+      </aside>
+
+      <article class="policy-card">
+        <p class="meta">Rosch Haden · Website Terms</p>
+
+        <h2 id="about">About these terms</h2>
+        <p>This website is operated by Birgit Rosch Haden trading as Rosch Haden. By using this website, submitting an enquiry or requesting information about services, you agree to use the site responsibly and in line with these terms.</p>
+        <p>If you do not agree with these terms, you should not use the website.</p>
+
+        <h3 id="website">Website use</h3>
+        <p>The content on this website is provided for general information about Rosch Haden and the executive support services offered. You agree not to misuse the website, attempt to interfere with its operation, submit false or misleading information, or use the website in a way that may damage the business or other users.</p>
+
+        <h3>Website content</h3>
+        <p>Care is taken to keep the website clear and accurate, but content may be updated, removed or changed at any time. The information on the website does not create a client relationship and should not be treated as professional, legal, financial or business advice specific to your circumstances.</p>
+
+        <h3 id="enquiries">Enquiries and proposals</h3>
+        <p>Submitting a contact form or sending an enquiry does not create a contract or guarantee availability. Rosch Haden may choose whether to respond to an enquiry, arrange a conversation, provide a proposal or accept a client engagement.</p>
+        <p>Any proposal, retainer option, timeline, scope or fee discussed before formal agreement is indicative only unless confirmed in writing.</p>
+
+        <h3 id="services">Services</h3>
+        <p>Rosch Haden provides remote executive support and executive partnership services. Services may include priority support, coordination, follow-through, operating rhythm support, meeting preparation, project momentum and related business support.</p>
+        <p>The exact scope, availability, fees, working arrangements and notice periods should be confirmed in a separate written agreement, proposal, retainer agreement or statement of work before client work begins.</p>
+
+        <h3 id="fees">Fees, retainers and payment</h3>
+        <p>Any pricing shown on the website or in private retainer materials is indicative and may vary depending on scope, availability, complexity and level of involvement required.</p>
+        <ul>
+          <li>Fees and payment terms will be confirmed in writing before services begin.</li>
+          <li>Retainer work may require payment in advance or on agreed billing dates.</li>
+          <li>Late payment may result in work being paused until the account is brought up to date.</li>
+          <li>Additional work outside the agreed scope may be quoted separately or billed by agreement.</li>
+        </ul>
+
+        <h3>Cancellation and changes</h3>
+        <p>Cancellation, notice periods, rescheduling and changes to scope should be handled in line with the written agreement in place for that client. Where no written agreement exists, Rosch Haden may decide reasonable arrangements on a case-by-case basis.</p>
+
+        <h3 id="confidentiality">Confidentiality</h3>
+        <p>Rosch Haden works with discretion and may receive confidential business information during enquiries or client work. Confidential information will be handled carefully and used only for the purpose of discussing or providing services, unless disclosure is required by law or agreed in writing.</p>
+        <p>Clients and prospective clients are also expected not to share confidential proposals, pricing, methods or materials without permission.</p>
+
+        <h3>Intellectual property</h3>
+        <p>Unless agreed otherwise in writing, the content, layout, wording, branding, images and materials on this website belong to Rosch Haden or are used with permission. You may not copy, reproduce, adapt or reuse website content for commercial purposes without written permission.</p>
+
+        <h3 id="liability">Limitation of liability</h3>
+        <p>The website is provided on an “as available” basis. Rosch Haden does not guarantee that the website will always be available, error-free or uninterrupted.</p>
+        <p>To the fullest extent permitted by law, Rosch Haden is not responsible for indirect loss, loss of profit, loss of business, loss of data or disruption arising from use of the website or reliance on general website content.</p>
+        <p>Nothing in these terms limits liability where it would be unlawful to do so.</p>
+
+        <h3>External links</h3>
+        <p>The website may include links to external websites or services. Rosch Haden is not responsible for the content, availability, privacy practices or terms of third-party websites.</p>
+
+        <h3>Privacy</h3>
+        <p>Personal information is handled in line with the Rosch Haden privacy policy. Please read the privacy policy for details about how enquiry and client information is collected, used and protected.</p>
+
+        <h3 id="law">Governing law</h3>
+        <p>These terms are governed by the laws of England and Wales. Any dispute relating to the website or these terms will be subject to the courts of England and Wales, unless mandatory law provides otherwise.</p>
+
+        <h3>Contact</h3>
+        <p>Questions about these terms can be sent via the contact page.</p>
+        <p><strong>Website:</strong> www.roschhaden.com</p>
+
+        <div class="cta">
+          <h3>Ready to talk about support?</h3>
+          <p>If you are exploring executive support, start with a simple conversation and we can shape the right level of involvement from there.</p>
+          <a href="contact.html" class="btn">Start a conversation</a>
+        </div>
+      </article>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <p>© 2026 Birgit Rosch Haden. All rights reserved.</p>
+    <div class="footer-links">
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="reviews.html">Reviews</a>
+      <a href="contact.html">Contact</a>
+      <a href="gdpr.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
