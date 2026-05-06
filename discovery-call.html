@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title>Book a Discovery Call | Rosch Haden</title>
+<meta name="description" content="Book a confidential discovery call with Rosch Haden to discuss executive support, operational structure and founder support." />
+
+<link rel="canonical" href="https://www.roschhaden.com/discovery-call.html" />
+
+<meta property="og:title" content="Book a Discovery Call | Rosch Haden" />
+<meta property="og:description" content="A calm, confidential conversation about executive support, operational pressure points and founder capacity." />
+<meta property="og:url" content="https://www.roschhaden.com/discovery-call.html" />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="https://www.roschhaden.com/logo.png" />
+
+<meta name="twitter:card" content="summary_large_image" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --cream: #f4eee5;
+  --cream-deep: #e7ddd0;
+  --blue: #6f879c;
+  --blue-deep: #4f6578;
+  --ink: #24323d;
+  --muted: #6f746f;
+  --white: #ffffff;
+  --card: rgba(255,255,255,0.72);
+  --border: rgba(79,101,120,0.16);
+  --shadow: 0 18px 45px rgba(36,50,61,0.09);
+  --radius-xl: 28px;
+  --radius-lg: 20px;
+  --max-width: 1180px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(180deg, var(--cream) 0%, #fbf8f3 38%, #f7f2eb 100%);
+  color: var(--ink);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.container {
+  width: min(calc(100% - 32px), var(--max-width));
+  margin: 0 auto;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(14px);
+  background: var(--blue-deep);
+  border-bottom: 1px solid rgba(255,255,255,0.15);
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  padding: 18px 0;
+}
+
+.brand {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  text-decoration: none;
+}
+
+.brand-mark {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2rem;
+  line-height: 1;
+  letter-spacing: 0.02em;
+  color: var(--white);
+}
+
+.brand-sub {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  color: rgba(255,255,255,0.75);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.nav a {
+  font-size: 0.92rem;
+  color: var(--white);
+  text-decoration: none;
+  position: relative;
+}
+
+.nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 100%;
+  height: 1px;
+  background: var(--white);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s ease;
+}
+
+.nav a:hover::after,
+.nav a:focus-visible::after,
+.nav a.active::after {
+  transform: scaleX(1);
+}
+
+.hero {
+  padding: 82px 0 54px;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 0.92fr;
+  gap: 32px;
+  align-items: center;
+}
+
+.eyebrow {
+  display: inline-block;
+  margin-bottom: 18px;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  color: var(--blue-deep);
+}
+
+h1, h2, h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 600;
+  line-height: 0.98;
+  letter-spacing: -0.01em;
+}
+
+h1 {
+  font-size: clamp(3.2rem, 7vw, 6rem);
+  margin-bottom: 24px;
+  max-width: 10ch;
+}
+
+.hero p {
+  color: #4f5f6b;
+  max-width: 58ch;
+  font-size: 1.05rem;
+}
+
+.hero-note {
+  margin-top: 26px;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.hero-card,
+.section-card {
+  background: var(--card);
+  border: 1px solid rgba(79,101,120,0.10);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow);
+}
+
+.hero-card {
+  padding: 34px;
+}
+
+.hero-card h3 {
+  font-size: 2rem;
+  margin-bottom: 16px;
+  color: var(--blue-deep);
+}
+
+.hero-card ul {
+  list-style: none;
+  display: grid;
+  gap: 14px;
+}
+
+.hero-card li {
+  padding-left: 28px;
+  position: relative;
+  color: #41515e;
+}
+
+.hero-card li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--blue-deep);
+  font-weight: 700;
+}
+
+.section {
+  padding: 0 0 78px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.section-card {
+  padding: 30px;
+}
+
+.section-card h2 {
+  font-size: 2.2rem;
+  margin-bottom: 14px;
+}
+
+.section-card p + p {
+  margin-top: 14px;
+}
+
+.section-card p,
+.section-card li {
+  color: #41515e;
+}
+
+.list {
+  list-style: none;
+  display: grid;
+  gap: 14px;
+  margin-top: 18px;
+}
+
+.list li {
+  padding-left: 28px;
+  position: relative;
+}
+
+.list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--blue-deep);
+  font-size: 1.2rem;
+}
+
+.scheduler-wrap {
+  margin-top: 28px;
+  border-radius: 26px;
+  overflow: hidden;
+  border: 1px solid rgba(79,101,120,0.12);
+  box-shadow: var(--shadow);
+}
+
+.scheduler-placeholder {
+  background: rgba(255,255,255,0.75);
+  min-height: 700px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px;
+}
+
+.scheduler-placeholder-inner {
+  max-width: 540px;
+}
+
+.scheduler-placeholder h3 {
+  font-size: 2rem;
+  margin-bottom: 16px;
+  color: var(--blue-deep);
+}
+
+.scheduler-placeholder p {
+  color: #55626d;
+}
+
+.code-box {
+  margin-top: 24px;
+  padding: 20px;
+  border-radius: 18px;
+  background: #24323d;
+  color: #f7f2eb;
+  overflow-x: auto;
+  font-size: 0.92rem;
+}
+
+.footer {
+  padding: 28px 0 42px;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  border-top: 1px solid rgba(79,101,120,0.12);
+  padding-top: 22px;
+}
+
+@media(max-width:980px){
+  .hero-grid,
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media(max-width:760px){
+  .header-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav {
+    gap: 14px 18px;
+  }
+
+  .hero {
+    padding-top: 56px;
+  }
+
+  .hero-card,
+  .section-card {
+    padding: 24px;
+    border-radius: 22px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="brand" aria-label="Homepage">
+      <span class="brand-mark">Rosch Haden</span>
+      <span class="brand-sub">Executive Partner to Founders and Leaders</span>
+    </a>
+
+    <nav class="nav" aria-label="Main navigation">
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="reviews.html">Reviews</a>
+      <a href="retainer-pricing.html">Retainers</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<section class="hero">
+  <div class="container hero-grid">
+
+    <div>
+      <span class="eyebrow">Discovery Call</span>
+
+      <h1>Private executive support begins with a confidential conversation.</h1>
+
+      <p>
+        This initial call is designed to understand where operational pressure, decision fatigue, lack of structure or administrative overwhelm may be affecting momentum.
+      </p>
+
+      <p class="hero-note">
+        Calm, discreet support for founders, executives and fast-moving businesses.
+      </p>
+    </div>
+
+    <div class="hero-card">
+      <h3>What we’ll discuss</h3>
+
+      <ul>
+        <li>Operational bottlenecks and founder pressure points</li>
+        <li>Executive support requirements and priorities</li>
+        <li>Communication preferences and working rhythm</li>
+        <li>Current organisational challenges</li>
+        <li>Retainer suitability and next steps</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<section class="section">
+  <div class="container grid">
+
+    <div class="section-card">
+      <h2>A calm, structured first conversation.</h2>
+
+      <p>
+        This is not a high-pressure sales call.
+      </p>
+
+      <p>
+        The purpose of the conversation is to understand whether there is a strong mutual fit, what level of support may be appropriate, and whether Rosch Haden can provide meaningful operational relief and executive capacity support.
+      </p>
+
+      <ul class="list">
+        <li>Confidential and discreet</li>
+        <li>Founder-friendly approach</li>
+        <li>Clear next steps following the call</li>
+        <li>Tailored support discussions</li>
+      </ul>
+    </div>
+
+    <div class="section-card">
+      <h2>Confidentiality and discretion.</h2>
+
+      <p>
+        Executive support relationships rely heavily on trust, discretion and professionalism.
+      </p>
+
+      <p>
+        All discussions are handled confidentially and information shared during discovery conversations is treated with care and professional discretion.
+      </p>
+
+      <p>
+        Non-disclosure agreements can also be accommodated where required.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+
+    <div class="scheduler-wrap">
+
+      <div class="scheduler-placeholder">
+        <div class="scheduler-placeholder-inner">
+
+          <span class="eyebrow">Scheduling</span>
+
+          <h3>Embed your Calendly or TidyCal booking calendar here.</h3>
+
+          <p>
+            Replace this placeholder with your scheduling embed once your booking account is ready.
+          </p>
+
+          <div class="code-box">
+&lt;!-- Calendly embed example --&gt;
+&lt;div class="calendly-inline-widget"
+ data-url="https://calendly.com/YOUR-LINK"
+ style="min-width:320px;height:700px;"&gt;
+&lt;/div&gt;
+
+&lt;script src="https://assets.calendly.com/assets/external/widget.js" async&gt;&lt;/script&gt;
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <p>© 2026 Birgit Rosch Haden. All rights reserved.</p>
+    <p>www.roschhaden.com</p>
+  </div>
+</footer>
+
+</body>
+</html>
+```
+
+## Next steps
+
+1. Save this as:
+   `discovery-call.html`
+
+2. Upload it to your site root.
+
+3. Create a Calendly or TidyCal account.
+
+4. Replace the placeholder embed code with your real scheduling link.
+
+5. Add a navigation link from:
+
+   * homepage
+   * services page
+   * retainer pricing page
+   * contact page
+
+Suggested button text:
+
+* Book Discovery Call
+* Schedule a Confidential Conversation
+* Arrange a Private Consultation
