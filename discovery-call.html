@@ -6,7 +6,6 @@
 
 <title>Book a Discovery Call | Rosch Haden</title>
 <meta name="description" content="Book a confidential discovery call with Rosch Haden to discuss executive support, operational structure and founder support." />
-
 <link rel="canonical" href="https://www.roschhaden.com/discovery-call.html" />
 
 <meta property="og:title" content="Book a Discovery Call | Rosch Haden" />
@@ -14,7 +13,6 @@
 <meta property="og:url" content="https://www.roschhaden.com/discovery-call.html" />
 <meta property="og:type" content="website" />
 <meta property="og:image" content="https://www.roschhaden.com/logo.png" />
-
 <meta name="twitter:card" content="summary_large_image" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -38,15 +36,9 @@
   --max-width: 1180px;
 }
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+* { box-sizing: border-box; margin: 0; padding: 0; }
 
-html {
-  scroll-behavior: smooth;
-}
+html { scroll-behavior: smooth; }
 
 body {
   font-family: 'Inter', sans-serif;
@@ -57,15 +49,8 @@ body {
   text-rendering: optimizeLegibility;
 }
 
-img {
-  max-width: 100%;
-  display: block;
-}
-
-.container {
-  width: min(calc(100% - 32px), var(--max-width));
-  margin: 0 auto;
-}
+a { color: inherit; text-decoration: none; }
+.container { width: min(calc(100% - 32px), var(--max-width)); margin: 0 auto; }
 
 .site-header {
   position: sticky;
@@ -84,12 +69,7 @@ img {
   padding: 18px 0;
 }
 
-.brand {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-  text-decoration: none;
-}
+.brand { display: flex; flex-direction: column; gap: 2px; }
 
 .brand-mark {
   font-family: 'Cormorant Garamond', serif;
@@ -106,17 +86,11 @@ img {
   color: rgba(255,255,255,0.75);
 }
 
-.nav {
-  display: flex;
-  align-items: center;
-  gap: 24px;
-  flex-wrap: wrap;
-}
+.nav { display: flex; align-items: center; gap: 24px; flex-wrap: wrap; }
 
 .nav a {
   font-size: 0.92rem;
   color: var(--white);
-  text-decoration: none;
   position: relative;
 }
 
@@ -135,20 +109,9 @@ img {
 
 .nav a:hover::after,
 .nav a:focus-visible::after,
-.nav a.active::after {
-  transform: scaleX(1);
-}
+.nav a.active::after { transform: scaleX(1); }
 
-.hero {
-  padding: 82px 0 54px;
-}
-
-.hero-grid {
-  display: grid;
-  grid-template-columns: 1fr 0.92fr;
-  gap: 32px;
-  align-items: center;
-}
+.hero { padding: 78px 0 46px; text-align: center; }
 
 .eyebrow {
   display: inline-block;
@@ -167,54 +130,53 @@ h1, h2, h3 {
 }
 
 h1 {
-  font-size: clamp(3.2rem, 7vw, 6rem);
-  margin-bottom: 24px;
-  max-width: 10ch;
+  font-size: clamp(3rem, 6vw, 5.4rem);
+  margin: 0 auto 20px;
+  max-width: 12ch;
 }
 
 .hero p {
-  color: #4f5f6b;
-  max-width: 58ch;
+  max-width: 68ch;
+  margin: 0 auto;
+  color: #55626d;
   font-size: 1.05rem;
 }
 
-.hero-note {
-  margin-top: 26px;
-  color: var(--muted);
-  font-size: 0.95rem;
+.booking-section { padding: 8px 0 80px; }
+
+.booking-layout {
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: 24px;
+  align-items: start;
 }
 
-.hero-card,
-.section-card {
+.panel {
   background: var(--card);
   border: 1px solid rgba(79,101,120,0.10);
   border-radius: var(--radius-xl);
   box-shadow: var(--shadow);
+  padding: 30px;
 }
 
-.hero-card {
-  padding: 34px;
-}
+.panel h2 { font-size: 2.25rem; margin-bottom: 12px; }
+.panel h3 { font-size: 1.6rem; margin-bottom: 12px; color: var(--blue-deep); }
+.panel p { color: #41515e; margin-bottom: 14px; }
 
-.hero-card h3 {
-  font-size: 2rem;
-  margin-bottom: 16px;
-  color: var(--blue-deep);
-}
-
-.hero-card ul {
+.info-list {
   list-style: none;
   display: grid;
-  gap: 14px;
+  gap: 12px;
+  margin-top: 18px;
 }
 
-.hero-card li {
+.info-list li {
   padding-left: 28px;
   position: relative;
   color: #41515e;
 }
 
-.hero-card li::before {
+.info-list li::before {
   content: "✓";
   position: absolute;
   left: 0;
@@ -223,95 +185,216 @@ h1 {
   font-weight: 700;
 }
 
-.section {
-  padding: 0 0 78px;
+.booking-card {
+  background: linear-gradient(180deg, rgba(255,255,255,0.86), rgba(255,255,255,0.66));
+  border: 1px solid rgba(79,101,120,0.14);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow);
+  overflow: hidden;
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 24px;
+.booking-head {
+  padding: 28px 30px;
+  background: rgba(79,101,120,0.08);
+  border-bottom: 1px solid rgba(79,101,120,0.12);
 }
 
-.section-card {
-  padding: 30px;
-}
+.booking-head h2 { font-size: 2.3rem; margin-bottom: 8px; }
+.booking-head p { color: #55626d; }
 
-.section-card h2 {
-  font-size: 2.2rem;
+.booking-body { padding: 30px; }
+
+.step-label {
+  display: inline-flex;
   margin-bottom: 14px;
-}
-
-.section-card p + p {
-  margin-top: 14px;
-}
-
-.section-card p,
-.section-card li {
-  color: #41515e;
-}
-
-.list {
-  list-style: none;
-  display: grid;
-  gap: 14px;
-  margin-top: 18px;
-}
-
-.list li {
-  padding-left: 28px;
-  position: relative;
-}
-
-.list li::before {
-  content: "•";
-  position: absolute;
-  left: 0;
-  top: 0;
+  padding: 7px 12px;
+  border-radius: 999px;
+  background: rgba(111,135,156,0.14);
   color: var(--blue-deep);
+  font-size: 0.74rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-weight: 700;
+}
+
+.month-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.month-row strong {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.8rem;
+  color: var(--ink);
+}
+
+.month-actions { display: flex; gap: 8px; }
+
+.icon-btn {
+  border: 1px solid var(--border);
+  background: rgba(255,255,255,0.72);
+  color: var(--ink);
+  border-radius: 999px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
   font-size: 1.2rem;
 }
 
-.scheduler-wrap {
-  margin-top: 28px;
-  border-radius: 26px;
-  overflow: hidden;
-  border: 1px solid rgba(79,101,120,0.12);
-  box-shadow: var(--shadow);
+.date-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+  margin-bottom: 24px;
 }
 
-.scheduler-placeholder {
-  background: rgba(255,255,255,0.75);
-  min-height: 700px;
-  display: flex;
+.day-name {
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.76rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding-bottom: 4px;
+}
+
+.date-btn {
+  min-height: 48px;
+  border: 1px solid rgba(79,101,120,0.14);
+  background: rgba(255,255,255,0.72);
+  color: var(--ink);
+  border-radius: 14px;
+  cursor: pointer;
+  font-family: inherit;
+  transition: transform 0.18s ease, border-color 0.18s ease, background 0.18s ease;
+}
+
+.date-btn:hover:not(:disabled),
+.date-btn.active {
+  transform: translateY(-1px);
+  border-color: var(--blue-deep);
+  background: rgba(79,101,120,0.10);
+}
+
+.date-btn:disabled {
+  opacity: 0.36;
+  cursor: not-allowed;
+}
+
+.slot-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-bottom: 26px;
+}
+
+.slot-btn {
+  padding: 13px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(79,101,120,0.18);
+  background: rgba(255,255,255,0.76);
+  color: var(--ink);
+  font-family: inherit;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.slot-btn:hover,
+.slot-btn.active {
+  border-color: var(--blue-deep);
+  background: var(--blue-deep);
+  color: var(--white);
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.form-group { margin-bottom: 16px; }
+
+.form-group.full { grid-column: 1 / -1; }
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--ink);
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 14px 15px;
+  border: 1px solid rgba(79,101,120,0.20);
+  background: rgba(255,255,255,0.80);
+  border-radius: 14px;
+  font: inherit;
+  color: var(--ink);
+  outline: none;
+}
+
+input:focus,
+textarea:focus {
+  border-color: var(--blue-deep);
+  box-shadow: 0 0 0 3px rgba(111,135,156,0.14);
+  background: var(--white);
+}
+
+textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+.summary {
+  margin: 8px 0 22px;
+  padding: 18px;
+  border-radius: 20px;
+  background: rgba(111,135,156,0.12);
+  border: 1px solid var(--border);
+  color: #41515e;
+}
+
+.summary strong { color: var(--blue-deep); }
+
+.btn {
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
-  padding: 40px;
+  width: 100%;
+  padding: 15px 24px;
+  border-radius: 999px;
+  border: 0;
+  background: var(--blue-deep);
+  color: var(--white);
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
 }
 
-.scheduler-placeholder-inner {
-  max-width: 540px;
+.btn:disabled {
+  opacity: 0.48;
+  cursor: not-allowed;
 }
 
-.scheduler-placeholder h3 {
-  font-size: 2rem;
-  margin-bottom: 16px;
-  color: var(--blue-deep);
+.success {
+  display: none;
+  margin-top: 18px;
+  padding: 18px 20px;
+  border-radius: 20px;
+  background: rgba(94, 105, 89, 0.12);
+  border: 1px solid rgba(94, 105, 89, 0.22);
+  color: #374235;
 }
 
-.scheduler-placeholder p {
-  color: #55626d;
-}
-
-.code-box {
-  margin-top: 24px;
-  padding: 20px;
-  border-radius: 18px;
-  background: #24323d;
-  color: #f7f2eb;
-  overflow-x: auto;
-  font-size: 0.92rem;
+.note {
+  margin-top: 18px;
+  color: var(--muted);
+  font-size: 0.9rem;
 }
 
 .footer {
@@ -331,31 +414,17 @@ h1 {
 }
 
 @media(max-width:980px){
-  .hero-grid,
-  .grid {
-    grid-template-columns: 1fr;
-  }
+  .booking-layout { grid-template-columns: 1fr; }
 }
 
 @media(max-width:760px){
-  .header-inner {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .nav {
-    gap: 14px 18px;
-  }
-
-  .hero {
-    padding-top: 56px;
-  }
-
-  .hero-card,
-  .section-card {
-    padding: 24px;
-    border-radius: 22px;
-  }
+  .header-inner { flex-direction: column; align-items: flex-start; }
+  .nav { gap: 14px 18px; }
+  .panel, .booking-body, .booking-head { padding: 22px; }
+  .date-grid { gap: 6px; }
+  .date-btn { min-height: 42px; border-radius: 12px; }
+  .slot-grid, .form-grid { grid-template-columns: 1fr; }
+  .form-group.full { grid-column: auto; }
 }
 </style>
 </head>
@@ -382,108 +451,96 @@ h1 {
 <main>
 
 <section class="hero">
-  <div class="container hero-grid">
+  <div class="container">
+    <span class="eyebrow">Discovery Call</span>
+    <h1>Private executive support begins with a confidential conversation.</h1>
+    <p>This initial call is designed to understand where operational pressure, decision fatigue, lack of structure or administrative overwhelm may be affecting momentum.</p>
+  </div>
+</section>
 
-    <div>
-      <span class="eyebrow">Discovery Call</span>
+<section class="booking-section">
+  <div class="container booking-layout">
 
-      <h1>Private executive support begins with a confidential conversation.</h1>
+    <aside class="panel">
+      <h2>A calm, structured first conversation.</h2>
+      <p>This is not a high-pressure sales call. It is a confidential conversation to understand whether there is a strong mutual fit and what level of support may be appropriate.</p>
 
-      <p>
-        This initial call is designed to understand where operational pressure, decision fatigue, lack of structure or administrative overwhelm may be affecting momentum.
-      </p>
-
-      <p class="hero-note">
-        Calm, discreet support for founders, executives and fast-moving businesses.
-      </p>
-    </div>
-
-    <div class="hero-card">
       <h3>What we’ll discuss</h3>
-
-      <ul>
+      <ul class="info-list">
         <li>Operational bottlenecks and founder pressure points</li>
         <li>Executive support requirements and priorities</li>
         <li>Communication preferences and working rhythm</li>
         <li>Current organisational challenges</li>
         <li>Retainer suitability and next steps</li>
       </ul>
-    </div>
 
-  </div>
-</section>
+      <p class="note">This booking interface currently uses hardcoded availability. Outlook calendar sync will be added in the next phase.</p>
+    </aside>
 
-<section class="section">
-  <div class="container grid">
-
-    <div class="section-card">
-      <h2>A calm, structured first conversation.</h2>
-
-      <p>
-        This is not a high-pressure sales call.
-      </p>
-
-      <p>
-        The purpose of the conversation is to understand whether there is a strong mutual fit, what level of support may be appropriate, and whether Rosch Haden can provide meaningful operational relief and executive capacity support.
-      </p>
-
-      <ul class="list">
-        <li>Confidential and discreet</li>
-        <li>Founder-friendly approach</li>
-        <li>Clear next steps following the call</li>
-        <li>Tailored support discussions</li>
-      </ul>
-    </div>
-
-    <div class="section-card">
-      <h2>Confidentiality and discretion.</h2>
-
-      <p>
-        Executive support relationships rely heavily on trust, discretion and professionalism.
-      </p>
-
-      <p>
-        All discussions are handled confidentially and information shared during discovery conversations is treated with care and professional discretion.
-      </p>
-
-      <p>
-        Non-disclosure agreements can also be accommodated where required.
-      </p>
-    </div>
-
-  </div>
-</section>
-
-<section class="section">
-  <div class="container">
-
-    <div class="scheduler-wrap">
-
-      <div class="scheduler-placeholder">
-        <div class="scheduler-placeholder-inner">
-
-          <span class="eyebrow">Scheduling</span>
-
-          <h3>Embed your Calendly or TidyCal booking calendar here.</h3>
-
-          <p>
-            Replace this placeholder with your scheduling embed once your booking account is ready.
-          </p>
-
-          <div class="code-box">
-&lt;!-- Calendly embed example --&gt;
-&lt;div class="calendly-inline-widget"
- data-url="https://calendly.com/YOUR-LINK"
- style="min-width:320px;height:700px;"&gt;
-&lt;/div&gt;
-
-&lt;script src="https://assets.calendly.com/assets/external/widget.js" async&gt;&lt;/script&gt;
-          </div>
-
-        </div>
+    <section class="booking-card" aria-label="Book a discovery call">
+      <div class="booking-head">
+        <h2>Book your discovery call</h2>
+        <p>Choose a date and time, then share a few details before your confidential conversation.</p>
       </div>
 
-    </div>
+      <div class="booking-body">
+        <span class="step-label">Step 1 · Select a date</span>
+
+        <div class="month-row">
+          <strong id="monthLabel">Month</strong>
+          <div class="month-actions">
+            <button class="icon-btn" type="button" id="prevMonth" aria-label="Previous month">‹</button>
+            <button class="icon-btn" type="button" id="nextMonth" aria-label="Next month">›</button>
+          </div>
+        </div>
+
+        <div class="date-grid" id="calendarGrid" aria-label="Available dates"></div>
+
+        <span class="step-label">Step 2 · Select a time</span>
+        <div class="slot-grid" id="slotGrid" aria-label="Available time slots"></div>
+
+        <div class="summary" id="bookingSummary">
+          <strong>Selected:</strong> Please choose a date and time.
+        </div>
+
+        <span class="step-label">Step 3 · Your details</span>
+
+        <form id="bookingForm">
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="firstName">First name</label>
+              <input id="firstName" name="firstName" autocomplete="given-name" required>
+            </div>
+
+            <div class="form-group">
+              <label for="lastName">Last name</label>
+              <input id="lastName" name="lastName" autocomplete="family-name" required>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" autocomplete="email" required>
+            </div>
+
+            <div class="form-group">
+              <label for="company">Company</label>
+              <input id="company" name="company" autocomplete="organization">
+            </div>
+
+            <div class="form-group full">
+              <label for="notes">What would you like support with?</label>
+              <textarea id="notes" name="notes" placeholder="Share a short note about your current priorities, pressure points or support needs."></textarea>
+            </div>
+          </div>
+
+          <button class="btn" type="submit" id="submitBtn" disabled>Confirm Discovery Call</button>
+
+          <div class="success" id="successMessage">
+            Your booking has been prepared. In the next phase, this will create the Outlook calendar event and send confirmation emails automatically.
+          </div>
+        </form>
+      </div>
+    </section>
 
   </div>
 </section>
@@ -497,30 +554,203 @@ h1 {
   </div>
 </footer>
 
+<script>
+const availability = {
+  2: ["10:00", "11:00", "14:00"],          // Tuesday
+  3: ["10:00", "11:00", "14:00", "15:00"], // Wednesday
+  4: ["10:00", "11:00", "14:00"]           // Thursday
+};
+
+const unavailableDates = [
+  // Example format: "2026-05-14"
+];
+
+let visibleDate = new Date();
+let selectedDate = "";
+let selectedTime = "";
+
+const calendarGrid = document.getElementById("calendarGrid");
+const slotGrid = document.getElementById("slotGrid");
+const monthLabel = document.getElementById("monthLabel");
+const bookingSummary = document.getElementById("bookingSummary");
+const submitBtn = document.getElementById("submitBtn");
+const successMessage = document.getElementById("successMessage");
+
+const dayNames = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+
+function toDateKey(date) {
+  const y = date.getFullYear();
+  const m = String(date.getMonth() + 1).padStart(2, "0");
+  const d = String(date.getDate()).padStart(2, "0");
+  return `${y}-${m}-${d}`;
+}
+
+function formatDisplayDate(dateKey) {
+  if (!dateKey) return "";
+  const [year, month, day] = dateKey.split("-").map(Number);
+  const date = new Date(year, month - 1, day);
+  return date.toLocaleDateString("en-GB", {
+    weekday: "long",
+    day: "numeric",
+    month: "long",
+    year: "numeric"
+  });
+}
+
+function isPast(date) {
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+  const check = new Date(date);
+  check.setHours(0, 0, 0, 0);
+  return check < today;
+}
+
+function isAvailableDate(date) {
+  const day = date.getDay();
+  const dateKey = toDateKey(date);
+
+  if (isPast(date)) return false;
+  if (unavailableDates.includes(dateKey)) return false;
+
+  return Boolean(availability[day]);
+}
+
+function renderCalendar() {
+  calendarGrid.innerHTML = "";
+
+  dayNames.forEach(day => {
+    const el = document.createElement("div");
+    el.className = "day-name";
+    el.textContent = day;
+    calendarGrid.appendChild(el);
+  });
+
+  const year = visibleDate.getFullYear();
+  const month = visibleDate.getMonth();
+
+  monthLabel.textContent = visibleDate.toLocaleDateString("en-GB", {
+    month: "long",
+    year: "numeric"
+  });
+
+  const firstOfMonth = new Date(year, month, 1);
+  const lastOfMonth = new Date(year, month + 1, 0);
+  const startOffset = (firstOfMonth.getDay() + 6) % 7;
+
+  for (let i = 0; i < startOffset; i++) {
+    const blank = document.createElement("div");
+    calendarGrid.appendChild(blank);
+  }
+
+  for (let day = 1; day <= lastOfMonth.getDate(); day++) {
+    const date = new Date(year, month, day);
+    const dateKey = toDateKey(date);
+    const btn = document.createElement("button");
+
+    btn.type = "button";
+    btn.className = "date-btn";
+    btn.textContent = day;
+    btn.disabled = !isAvailableDate(date);
+
+    if (selectedDate === dateKey) btn.classList.add("active");
+
+    btn.addEventListener("click", () => {
+      selectedDate = dateKey;
+      selectedTime = "";
+      successMessage.style.display = "none";
+      renderCalendar();
+      renderSlots();
+      updateSummary();
+    });
+
+    calendarGrid.appendChild(btn);
+  }
+}
+
+function renderSlots() {
+  slotGrid.innerHTML = "";
+
+  if (!selectedDate) {
+    slotGrid.innerHTML = "<p style='grid-column:1/-1;color:#6f746f;'>Select a date to see available times.</p>";
+    return;
+  }
+
+  const [year, month, day] = selectedDate.split("-").map(Number);
+  const date = new Date(year, month - 1, day);
+  const dayNumber = date.getDay();
+  const slots = availability[dayNumber] || [];
+
+  if (!slots.length) {
+    slotGrid.innerHTML = "<p style='grid-column:1/-1;color:#6f746f;'>No times available on this date.</p>";
+    return;
+  }
+
+  slots.forEach(slot => {
+    const btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "slot-btn";
+    btn.textContent = slot;
+
+    if (selectedTime === slot) btn.classList.add("active");
+
+    btn.addEventListener("click", () => {
+      selectedTime = slot;
+      successMessage.style.display = "none";
+      renderSlots();
+      updateSummary();
+    });
+
+    slotGrid.appendChild(btn);
+  });
+}
+
+function updateSummary() {
+  if (!selectedDate || !selectedTime) {
+    bookingSummary.innerHTML = "<strong>Selected:</strong> Please choose a date and time.";
+    submitBtn.disabled = true;
+    return;
+  }
+
+  bookingSummary.innerHTML = `<strong>Selected:</strong> ${formatDisplayDate(selectedDate)} at ${selectedTime} · 45 minutes`;
+  submitBtn.disabled = false;
+}
+
+document.getElementById("prevMonth").addEventListener("click", () => {
+  visibleDate = new Date(visibleDate.getFullYear(), visibleDate.getMonth() - 1, 1);
+  renderCalendar();
+});
+
+document.getElementById("nextMonth").addEventListener("click", () => {
+  visibleDate = new Date(visibleDate.getFullYear(), visibleDate.getMonth() + 1, 1);
+  renderCalendar();
+});
+
+document.getElementById("bookingForm").addEventListener("submit", event => {
+  event.preventDefault();
+
+  if (!selectedDate || !selectedTime) return;
+
+  const bookingData = {
+    date: selectedDate,
+    time: selectedTime,
+    durationMinutes: 45,
+    firstName: document.getElementById("firstName").value.trim(),
+    lastName: document.getElementById("lastName").value.trim(),
+    email: document.getElementById("email").value.trim(),
+    company: document.getElementById("company").value.trim(),
+    notes: document.getElementById("notes").value.trim()
+  };
+
+  console.log("Booking data ready for Worker:", bookingData);
+
+  localStorage.setItem("roschHadenDiscoveryBookingDraft", JSON.stringify(bookingData));
+  successMessage.style.display = "block";
+});
+
+renderCalendar();
+renderSlots();
+updateSummary();
+</script>
+
 </body>
 </html>
-```
-
-## Next steps
-
-1. Save this as:
-   `discovery-call.html`
-
-2. Upload it to your site root.
-
-3. Create a Calendly or TidyCal account.
-
-4. Replace the placeholder embed code with your real scheduling link.
-
-5. Add a navigation link from:
-
-   * homepage
-   * services page
-   * retainer pricing page
-   * contact page
-
-Suggested button text:
-
-* Book Discovery Call
-* Schedule a Confidential Conversation
-* Arrange a Private Consultation
