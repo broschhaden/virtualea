@@ -45,39 +45,72 @@
     .clause-card p{color:#41515e;margin-bottom:13px}
     .clause-card ul{margin:10px 0 16px 22px;color:#41515e}
     .clause-card li{margin-bottom:7px}
-    .fields{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:18px 0}
-    .field{padding:14px 16px;border-radius:16px;background:rgba(255,255,255,.55);border:1px solid var(--border)}
-    .field strong{display:block;color:var(--blue-deep);font-size:.82rem;text-transform:uppercase;letter-spacing:.10em;margin-bottom:7px}
-    .editable{
-      display:block;
-      min-height:1.45em;
-      padding:4px 0 3px;
-      border-bottom:1px dashed rgba(79,101,120,.42);
-      color:#24323d;
-      outline:none;
-      white-space:pre-wrap;
+    .fields{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:22px 0}
+    .field{
+      padding:17px 17px 16px;
+      border-radius:22px;
+      background:linear-gradient(180deg,rgba(255,255,255,.86),rgba(255,255,255,.58));
+      border:1px solid rgba(79,101,120,.18);
+      box-shadow:0 12px 30px rgba(36,50,61,.06);
     }
-    .editable:focus{
-      background:rgba(255,255,255,.55);
-      border-bottom-color:var(--blue-deep);
+    .field strong{display:block;color:var(--blue-deep);font-size:.76rem;text-transform:uppercase;letter-spacing:.13em;margin-bottom:8px}
+    .field-text{display:block;color:#24323d;font-weight:500;margin-bottom:8px}
+    .editable,
+    .premium-input,
+    .premium-textarea{
+      width:100%;
+      display:block;
+      min-height:42px;
+      margin-top:7px;
+      padding:10px 12px;
+      border-radius:13px;
+      border:1px solid rgba(79,101,120,.22);
+      background:rgba(255,255,255,.82);
+      color:#24323d;
+      font:inherit;
+      line-height:1.45;
+      outline:none;
+      box-shadow:inset 0 1px 0 rgba(255,255,255,.7);
+      transition:border-color .18s ease,box-shadow .18s ease,background .18s ease;
+    }
+    .premium-textarea{resize:vertical;min-height:78px}
+    .editable{white-space:pre-wrap}
+    .editable:focus,
+    .premium-input:focus,
+    .premium-textarea:focus{
+      border-color:var(--blue-deep);
+      background:#fff;
+      box-shadow:0 0 0 3px rgba(111,135,156,.14), inset 0 1px 0 rgba(255,255,255,.8);
     }
     .editable[contenteditable="true"]:empty::before{
       content:attr(data-placeholder);
       color:#7f898f;
       font-style:italic;
     }
-    .inline-edit{
+    .premium-input::placeholder,
+    .premium-textarea::placeholder{color:#7f898f;font-style:italic}
+    .inline-edit,
+    .inline-date{
       display:inline-block;
-      min-width:120px;
-      padding:1px 4px;
-      border-bottom:1px dashed rgba(79,101,120,.42);
+      min-width:165px;
+      max-width:100%;
+      margin-left:4px;
+      padding:7px 10px;
+      border-radius:11px;
+      border:1px solid rgba(79,101,120,.22);
+      background:rgba(255,255,255,.82);
       color:#24323d;
+      font:inherit;
       outline:none;
-      white-space:pre-wrap;
+      vertical-align:middle;
+      transition:border-color .18s ease,box-shadow .18s ease,background .18s ease;
     }
-    .inline-edit:focus{
-      background:rgba(255,255,255,.55);
-      border-bottom-color:var(--blue-deep);
+    .inline-edit{white-space:pre-wrap}
+    .inline-edit:focus,
+    .inline-date:focus{
+      border-color:var(--blue-deep);
+      background:#fff;
+      box-shadow:0 0 0 3px rgba(111,135,156,.14);
     }
     .inline-edit[contenteditable="true"]:empty::before{
       content:attr(data-placeholder);
@@ -119,18 +152,23 @@
       .fields{grid-template-columns:1fr 1fr;gap:8px;margin:8px 0}
       .field{padding:7px;border-radius:8px}
       .field strong{font-size:.6rem;margin-bottom:2px}
-      .editable,.inline-edit{
-        border-bottom:1px solid rgba(36,50,61,.32);
-        padding:0;
-        min-height:1.1em;
+      .editable,.premium-input,.premium-textarea,.inline-edit,.inline-date{
+        border:1px solid rgba(36,50,61,.28);
+        border-radius:6px;
+        padding:3px 5px;
+        min-height:1.45em;
         color:#000;
+        background:#fff;
+        box-shadow:none;
       }
-      .editable[contenteditable="true"]:empty::before,
-      .inline-edit[contenteditable="true"]:empty::before{
+      .premium-textarea{min-height:34px;resize:none}
+      .field-text{margin-bottom:3px;color:#000}
+      .editable[contenteditable="true"]:empty::before{
         content:attr(data-placeholder);
         color:#555;
         font-style:normal;
       }
+      .premium-input::placeholder,.premium-textarea::placeholder,.inline-edit::placeholder{color:#555;font-style:normal}
       .signature-grid{grid-template-columns:1fr 1fr;gap:8px}
       .signature-box{min-height:105px;border-radius:8px;padding:8px}
       .line{height:22px;margin:8px 0 5px}
@@ -181,7 +219,7 @@
         <li><a href="#law">Law</a></li>
         <li><a href="#signatures">Signatures</a></li>
       </ul>
-      <div class="note">Click any editable field, complete the details, then use Download PDF.</div>
+      <div class="note">Complete the premium fields, select dates from the calendar pickers, then use Download PDF.</div>
     </aside>
 
     <article class="clause-card">
@@ -193,34 +231,34 @@
       <div class="fields">
         <div class="field">
           <strong>Provider</strong>
-          Birgit Rosch Haden trading as Rosch Haden
-          <span class="editable" contenteditable="true" data-placeholder="Provider address"></span>
+          <span class="field-text">Birgit Rosch Haden trading as Rosch Haden</span>
+          <textarea class="premium-textarea" placeholder="Provider address"></textarea>
         </div>
 
         <div class="field">
           <strong>Client</strong>
-          <span class="editable" contenteditable="true" data-placeholder="Client legal name"></span>
-          <span class="editable" contenteditable="true" data-placeholder="Client address / company number"></span>
+          <input class="premium-input" type="text" placeholder="Client legal name">
+          <textarea class="premium-textarea" placeholder="Client address / company number"></textarea>
         </div>
 
         <div class="field">
           <strong>Start date</strong>
-          <span class="editable" contenteditable="true" data-placeholder="Insert date"></span>
+          <input class="premium-input" type="date">
         </div>
 
         <div class="field">
           <strong>Initial term</strong>
-          <span class="editable" contenteditable="true" data-placeholder="e.g. 3 months / rolling monthly"></span>
+          <input class="premium-input" type="text" placeholder="e.g. 3 months / rolling monthly">
         </div>
 
         <div class="field">
           <strong>Retainer / fee</strong>
-          <span class="editable" contenteditable="true" data-placeholder="Insert monthly fee or project fee"></span>
+          <input class="premium-input" type="text" placeholder="Insert monthly fee or project fee">
         </div>
 
         <div class="field">
           <strong>Payment terms</strong>
-          <span class="editable" contenteditable="true" data-placeholder="e.g. monthly in advance / 7 days"></span>
+          <input class="premium-input" type="text" placeholder="e.g. monthly in advance / 7 days">
         </div>
       </div>
 
@@ -328,15 +366,15 @@
           <strong>Signed for and on behalf of Rosch Haden</strong>
           <div class="line"></div>
           <p>Name: Birgit Rosch Haden</p>
-          <p>Date: <span class="inline-edit" contenteditable="true" data-placeholder="Insert date"></span></p>
+          <p>Date: <input class="inline-date" type="date"></p>
         </div>
 
         <div class="signature-box">
           <strong>Signed for and on behalf of the Client</strong>
           <div class="line"></div>
-          <p>Name: <span class="inline-edit" contenteditable="true" data-placeholder="Client signatory name"></span></p>
-          <p>Title: <span class="inline-edit" contenteditable="true" data-placeholder="Client title"></span></p>
-          <p>Date: <span class="inline-edit" contenteditable="true" data-placeholder="Insert date"></span></p>
+          <p>Name: <input class="inline-edit" type="text" placeholder="Client signatory name"></p>
+          <p>Title: <input class="inline-edit" type="text" placeholder="Client title"></p>
+          <p>Date: <input class="inline-date" type="date"></p>
         </div>
       </div>
     </article>
